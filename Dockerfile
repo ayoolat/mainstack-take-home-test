@@ -13,8 +13,6 @@ COPY tsconfig.json .
 COPY . .
 RUN npm run build
 
-COPY dist/. ./dist/
-
 EXPOSE 8082
 
-CMD ["node", "dist/index.js"]
+CMD ["npm", "start"]
