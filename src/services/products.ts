@@ -38,7 +38,7 @@ export class ProductService {
     const product = await ProductModel.findByIdAndUpdate(
       payload.id,
       {
-        $isDeleted: true,
+        $deleted: true,
       },
       { new: true }
     );
@@ -93,12 +93,10 @@ export class ProductService {
       | mongoose.UpdateQuery<IProduct> = { deleted: false };
 
     if (payload.search) {
-      match = {
-        $or: [
-          { name: new RegExp(payload.search, "i") },
-          { description: new RegExp(payload.search, "i") },
-        ],
-      };
+      match["$or"] = [
+        { name: new RegExp(payload.search, "i") },
+        { description: new RegExp(payload.search, "i") },
+      ];
     }
     if (payload.name) {
       match.name = payload.name;
