@@ -32,12 +32,18 @@ dependencies:
   mongodb:
     specifier: ^6.5.0
     version: 6.5.0
+  mongoose:
+    specifier: ^8.2.3
+    version: 8.2.3
   morgan:
     specifier: ^1.10.0
     version: 1.10.0
   rsdi:
     specifier: ^3.0.3
     version: 3.0.3
+  tslib:
+    specifier: ^2.6.2
+    version: 2.6.2
   winston:
     specifier: ^3.12.0
     version: 3.12.0
@@ -1903,7 +1909,6 @@ packages:
   /kareem@2.5.1:
     resolution: {integrity: sha512-7jFxRVm+jD+rkq3kY0iZDJfsO2/t4BBPeEb2qKn2lR/9KhuksYk5hxzfRYWMPV8P/x2d0kHD306YyWLzjjH+uA==}
     engines: {node: '>=12.0.0'}
-    dev: true
 
   /kuler@2.0.0:
     resolution: {integrity: sha512-Xq9nH7KlWZmXAtodXDDRE7vs6DU1gTU8zYDHDiWLSip45Egwq3plLHzPn27NgvzL2r1LMPC1vdqh98sQxtqj4A==}
@@ -2078,7 +2083,6 @@ packages:
       '@mongodb-js/saslprep': 1.1.5
       bson: 6.5.0
       mongodb-connection-string-url: 3.0.0
-    dev: true
 
   /mongodb@6.5.0:
     resolution: {integrity: sha512-Fozq68InT+JKABGLqctgtb8P56pRrJFkbhW0ux+x1mdHeyinor8oNzJqwLjV/t5X5nJGfTlluxfyMnOXNggIUA==}
@@ -2132,7 +2136,6 @@ packages:
       - snappy
       - socks
       - supports-color
-    dev: true
 
   /morgan@1.10.0:
     resolution: {integrity: sha512-AbegBVI4sh6El+1gNwvD5YIck7nSA36weD7xvIxG4in80j/UoK8AEGaWnnz8v1GxonMCltmlNs5ZKbGvl9b1XQ==}
@@ -2150,7 +2153,6 @@ packages:
   /mpath@0.9.0:
     resolution: {integrity: sha512-ikJRQTk8hw5DEoFVxHG1Gn9T/xcjtdnOKIU1JTmGjZZlg9LST2mBLmcX3/ICIbgJydT2GOc15RnNy5mHmzfSew==}
     engines: {node: '>=4.0.0'}
-    dev: true
 
   /mquery@5.0.0:
     resolution: {integrity: sha512-iQMncpmEK8R8ncT8HJGsGc9Dsp8xcgYMVSbs5jgnm1lFHTZqMJTUWTDx1LBO8+mK3tPNZWFLBghQEIOULSTHZg==}
@@ -2159,7 +2161,6 @@ packages:
       debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
@@ -2494,7 +2495,6 @@ packages:
 
   /sift@16.0.1:
     resolution: {integrity: sha512-Wv6BjQ5zbhW7VFefWusVP33T/EM0vYikCaQ2qR8yULbsilAT8/wQaXvuQ3ptGLpoKx+lihJE3y2UTgKDyyNHZQ==}
-    dev: true
 
   /simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}

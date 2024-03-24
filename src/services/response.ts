@@ -1,4 +1,4 @@
-import { ResponseDto } from "types/response/dtos";
+import { ResponseDto } from "../types/response/dtos";
 
 export class ResponseService {
   public static printResponse<T>(

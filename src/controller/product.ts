@@ -1,18 +1,17 @@
 import { logger } from "../logs/logger";
-import { NextFunction, Request, Response } from "express";
 import validator from "../validator/validate";
-import { ProductService } from "services/products";
+import { ProductService } from "../services/products";
+import { TProduct } from "../types/products/products";
+import { NextFunction, Request, Response } from "express";
 import * as productsValidator from "../validator/product";
+import { PagedList, ResponseDto } from "../types/response/dtos";
 
 import {
   CreateProductDto,
   DeleteProductDto,
   FilterProductsDto,
   UpdateProductDto,
-} from "types/products/dtos";
-import { PagedList, ResponseDto } from "types/response/dtos";
-import { TProduct } from "types/products/products";
-import { nextTick } from "process";
+} from "../types/products/dtos";
 
 export class ProductController {
   constructor(private readonly productService: ProductService) {
@@ -26,7 +25,7 @@ export class ProductController {
     request: Request,
     response: Response,
     next: NextFunction
-  ): Promise<Response<ResponseDto<TProduct>>> {
+  ): Promise<Response<ResponseDto<TProduct>> | void> {
     try {
       validator(productsValidator.createProduct, request.body),
         logger.debug(
@@ -39,7 +38,7 @@ export class ProductController {
       logger.debug(`End call to createProduct for user ${request.body.userId}`);
       return response.send(res);
     } catch (err: any) {
-      next(err);
+      return next(err);
     }
   }
 
@@ -47,7 +46,7 @@ export class ProductController {
     request: Request,
     response: Response,
     next: NextFunction
-  ): Promise<Response<ResponseDto<TProduct>>> {
+  ): Promise<Response<ResponseDto<TProduct>> | void> {
     try {
       validator(productsValidator.updateProduct, request.body),
         logger.debug(
@@ -60,7 +59,7 @@ export class ProductController {
       logger.debug(`End call to createProduct for user ${request.body.userId}`);
       return response.send(res);
     } catch (err: any) {
-      next(err);
+      return next(err);
     }
   }
 
@@ -68,7 +67,7 @@ export class ProductController {
     request: Request,
     response: Response,
     next: NextFunction
-  ): Promise<Response<ResponseDto<PagedList<TProduct[]>>>> {
+  ): Promise<Response<ResponseDto<PagedList<TProduct[]>>> | void> {
     try {
       validator(productsValidator.filterProduct, request.body),
         logger.debug(`Start call to getProducts`);
@@ -79,7 +78,7 @@ export class ProductController {
       logger.debug(`End call to getProducts`);
       return response.send(res);
     } catch (err: any) {
-      next(err);
+      return next(err);
     }
   }
 
@@ -87,7 +86,7 @@ export class ProductController {
     request: Request,
     response: Response,
     next: NextFunction
-  ): Promise<Response<ResponseDto<TProduct>>> {
+  ): Promise<Response<ResponseDto<TProduct>> | void> {
     try {
       validator(productsValidator.deleteProduct, request.params),
         logger.debug(
@@ -100,7 +99,7 @@ export class ProductController {
       logger.debug(`End call to deleteProduct for user ${request.body.userId}`);
       return response.send(res);
     } catch (err: any) {
-      next(err);
+      return next(err);
     }
   }
 }

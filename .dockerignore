@@ -1,0 +1,16 @@
+# Ignore node_modules directory
+node_modules
+
+# Ignore npm debug log
+npm-debug.log
+
+# Ignore any build artifacts
+/build
+
+# Ignore any development-related files
+*.log
+*.tmp
+*.bak
+.vscode/
+.idea/
+.DS_Store

@@ -4,7 +4,7 @@ import {
   DeleteProductDto,
   FilterProductsDto,
   UpdateProductDto,
-} from "types/products/dtos";
+} from "../types/products/dtos";
 
 export const createProduct = Joi.object<CreateProductDto>({
   name: Joi.string().required(),

@@ -4,7 +4,7 @@ import * as firebase from "firebase/app";
 import { LoginDTO } from "../types/auth/auth";
 import { ResponseService } from "./response";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { ResponseDto } from "types/response/dtos";
+import { ResponseDto } from "../types/response/dtos";
 
 export class AuthService {
   private readonly firebaseAdmin: admin.app.App;

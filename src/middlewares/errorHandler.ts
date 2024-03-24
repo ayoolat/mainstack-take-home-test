@@ -8,7 +8,6 @@ export class ErrorHandlerMiddleware {
     response: Response,
     next: NextFunction
   ) {
-    console.log(error);
     const errorResponse = new ResponseDto<null>();
     errorResponse.error = true;
     errorResponse.body = null;

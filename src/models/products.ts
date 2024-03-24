@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { TProduct } from "types/products/products";
+import { TProduct } from "../types/products/products";
 
 const schema = new mongoose.Schema<TProduct>(
   {
@@ -27,14 +27,14 @@ const schema = new mongoose.Schema<TProduct>(
     timestamps: true,
     typeKey: "$type",
     toObject: {
-      transform: function (doc, ret) {
+      transform: function (doc: any, ret: any) {
         ret.id = ret._id;
         delete ret.__v;
         delete ret.deleted;
       },
     },
     toJSON: {
-      transform: function (doc, ret) {
+      transform: function (doc: any, ret: any) {
         ret.id = ret._id;
         delete ret.__v;
         delete ret.deleted;

@@ -39,7 +39,7 @@ export class MongoDbConnection {
     this.connection.on("connected", () => {
       logger.debug("Mongoose connected to " + env.database.mongodb.name);
     });
-    this.connection.on("error", async (error) => {
+    this.connection.on("error", async (error: any) => {
       logger.error("Mongoose connection error: " + error);
       await this.openConnection();
     });

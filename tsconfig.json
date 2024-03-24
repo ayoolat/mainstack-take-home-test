@@ -1,11 +1,35 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "baseUrl": "src",
-    "outDir": "dist",
+    "baseUrl": ".",
+    "module": "commonjs",
+    "target": "esnext",
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "suppressImplicitAnyIndexErrors": false,
     "noImplicitAny": true,
-    "sourceMap": true
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "newLine": "LF",
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "noResolve": false,
+    "preserveConstEnums": true,
+    "emitDeclarationOnly": false,
+    "inlineSources": true,
+    "typeRoots": ["./node_modules/@types", "source/types"]
   },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules", "dist", "test"]
+  "include": ["./src/**/*.ts", "source/src/**/*.json"],
+  "exclude": ["node_modules", ".vscode", "test"],
+  "linterOptions": {
+    "exclude": []
+  }
 }
