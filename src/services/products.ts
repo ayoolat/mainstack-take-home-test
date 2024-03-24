@@ -38,7 +38,7 @@ export class ProductService {
     const product = await ProductModel.findByIdAndUpdate(
       payload.id,
       {
-        $deleted: true,
+        deleted: true,
       },
       { new: true }
     );
