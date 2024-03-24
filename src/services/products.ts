@@ -121,7 +121,7 @@ export class ProductService {
 
     return ResponseService.printResponse<PagedList<TProduct[]>>(
       200,
-      "Products successfully updated",
+      "Products successfully retieved",
       pagedList
     );
   }
