@@ -4,7 +4,6 @@ import { TProduct } from "../types/products/products";
 const schema = new mongoose.Schema<TProduct>(
   {
     name: {
-      unique: true,
       $type: String,
       required: true,
     },
@@ -19,7 +18,7 @@ const schema = new mongoose.Schema<TProduct>(
     },
     deleted: {
       $type: Boolean,
-      default: true,
+      default: false,
       required: true,
     },
   },
