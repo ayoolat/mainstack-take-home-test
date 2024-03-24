@@ -47,7 +47,7 @@ export class ProductService {
 
     return ResponseService.printResponse<TProduct>(
       201,
-      "Product successfully retrieved",
+      "Product successfully deleted",
       product
     );
   }
